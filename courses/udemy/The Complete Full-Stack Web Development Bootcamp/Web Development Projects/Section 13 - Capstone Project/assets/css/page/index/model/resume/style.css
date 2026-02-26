@@ -1,0 +1,152 @@
+/* common grid containers */
+.resume-container,
+.resume-sidebar,
+.resume__profile,
+.resume__education,
+.resume-main,
+.resume-work-section,
+.resume__experience,
+.resume__skills {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* spacing variations */
+.resume-container { 
+    gap: 1.5rem; 
+    margin-bottom: 3rem; 
+}
+.resume-sidebar,
+.resume-main { 
+    gap: 1rem; 
+}
+.resume-work-section { 
+    gap: 1.5rem; 
+    margin-top: 0.2rem; 
+}
+.resume__profile,
+.resume__education,
+.resume__experience,
+.resume__skills { 
+    grid-template-rows: auto 1fr; 
+    gap: 0.5rem; 
+}
+
+/* avatar */
+.resume__avatar {
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid var(--dark);
+    box-shadow: var(--shadow);
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* profile section */
+.resume__profile > h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: xxx-large;
+    margin-top: 0.5rem;
+}
+.resume__profile > h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 4rem;
+}
+.resume__profile > div { 
+    margin-top: 0.5rem; 
+}
+.resume__profile > div > p { 
+    text-align: justify; 
+}
+.resume__profile > div > ul {
+    margin-left: 1rem;
+    list-style: none;
+}
+.resume__profile > div > ul > li:nth-child(2) {
+    margin-top: 0.3rem;
+    margin-left: 1rem;
+}
+.resume__profile > div > ul > li > span { 
+    margin-left: 2rem; 
+}
+
+/* education section */
+.resume__education > h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+.resume__education > div { 
+    margin-top: 0.5rem; 
+}
+.resume__education > div > div {
+    margin-top: 0.5rem;
+    line-height: 1.05;
+}
+.resume__education > div > div,
+.resume__education > div > ul { 
+    margin-left: 0.5rem; 
+}
+.resume__education > div > ul { 
+    list-style: none; 
+}
+.resume__education > div > ul > li:nth-child(even) {
+    margin: 0.7rem 0;
+    padding-left: 1.25rem;
+}
+.resume__education > div > ul > li > ul > li { 
+    list-style: disc; 
+}
+
+/* layout helpers */
+.resume-offset { 
+    margin-left: 0rem; 
+}
+
+/* experience section */
+.resume__experience > ul { 
+    padding-left: 1.25rem; 
+}
+.resume__experience > ul > li { 
+    list-style: disc; 
+}
+.resume__experience > h2 {
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+.resume__experience > div > div > h3 {
+    display: inline;
+    text-transform: uppercase;
+}
+.resume__experience > div > div > span { 
+    margin-left: 0.5rem; 
+}
+.resume__experience > div > div > p:last-child {
+    text-align: justify;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+/* skills section */
+.skills-stack {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 0.2rem;
+    gap: 10px;
+}
+.resume__skills > h2 {
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+.skills-stack > div > ul {
+    padding-left: 1.55rem;
+    margin-top: 0.55rem;
+}
+.skills-stack > div > h4 { 
+    font-size: larger; 
+}
