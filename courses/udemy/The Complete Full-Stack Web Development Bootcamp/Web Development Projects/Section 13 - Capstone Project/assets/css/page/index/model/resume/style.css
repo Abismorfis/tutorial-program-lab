@@ -22,7 +22,7 @@
 }
 .resume-work-section { 
     gap: 1.5rem; 
-    margin-top: 0.2rem; 
+    margin-top: 0.5rem; 
 }
 .resume__profile,
 .resume__education,
@@ -34,7 +34,7 @@
 
 /* avatar */
 .resume__avatar {
-    width: 100%;
+    width: 75%;
     border-radius: 50%;
     border: 2px solid var(--dark);
     box-shadow: var(--shadow);
@@ -45,13 +45,22 @@
 }
 
 /* profile section */
-.resume__profile > h1 {
+.resume__profile > div:first-child {
+    display: grid;
+    justify-items: center;
+}
+.resume__profile > div:not(:first-child) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 0.5rem;
+}
+.resume__profile > div > h1 {
     text-align: center;
     text-transform: uppercase;
-    font-size: xxx-large;
     margin-top: 0.5rem;
 }
-.resume__profile > h2 {
+.resume__profile > div > h2 {
     text-align: center;
     text-transform: uppercase;
     margin-top: 4rem;
@@ -59,8 +68,9 @@
 .resume__profile > div { 
     margin-top: 0.5rem; 
 }
-.resume__profile > div > p { 
-    text-align: justify; 
+.resume__profile > div > p {
+    text-align: justify;
+    margin-top: 0.5rem;
 }
 .resume__profile > div > ul {
     margin-left: 1rem;
@@ -108,6 +118,9 @@
 }
 
 /* experience section */
+.modal-content {
+    font-size: 0.85rem;
+}
 .resume__experience > ul { 
     padding-left: 1.25rem; 
 }
@@ -118,17 +131,16 @@
     text-transform: uppercase;
     margin-top: 1rem;
 }
-.resume__experience > div > div > h3 {
+.resume__experience > div > div > div > h3 {
     display: inline;
     text-transform: uppercase;
 }
-.resume__experience > div > div > span { 
+.resume__experience > div > div > div > p > span { 
     margin-left: 0.5rem; 
 }
 .resume__experience > div > div > p:last-child {
     text-align: justify;
     margin-top: 0.5rem;
-    margin-left: 1rem;
 }
 
 /* skills section */
