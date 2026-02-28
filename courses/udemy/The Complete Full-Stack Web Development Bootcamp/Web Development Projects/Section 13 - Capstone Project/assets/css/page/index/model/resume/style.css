@@ -34,7 +34,7 @@
 
 /* avatar */
 .resume__avatar {
-    width: 75%;
+    width: 50%;
     border-radius: 50%;
     border: 2px solid var(--dark);
     box-shadow: var(--shadow);
@@ -63,7 +63,7 @@
 .resume__profile > div > h2 {
     text-align: center;
     text-transform: uppercase;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 .resume__profile > div { 
     margin-top: 0.5rem; 
@@ -72,16 +72,13 @@
     text-align: justify;
     margin-top: 0.5rem;
 }
-.resume__profile > div > ul {
-    margin-left: 1rem;
-    list-style: none;
+.resume-profile-details > div { 
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    margin-left: 0rem;
 }
-.resume__profile > div > ul > li:nth-child(2) {
-    margin-top: 0.3rem;
-    margin-left: 1rem;
-}
-.resume__profile > div > ul > li > span { 
-    margin-left: 2rem; 
+.resume-profile-details > div > div:first-child {
+    font-weight: bold;
 }
 
 /* education section */
