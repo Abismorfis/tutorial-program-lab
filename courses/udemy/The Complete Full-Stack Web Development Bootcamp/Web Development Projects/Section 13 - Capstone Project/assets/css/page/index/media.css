@@ -1,0 +1,245 @@
+/* --- Global Reset & Variables --- */
+:root {
+    --container-width: 1100px;
+    --gap: 1rem;
+    --radius: 10px;
+    --bp-md: 768px;
+    --bp-lg: 1024px;
+    --section-padding: 3rem;
+}
+
+/* --- Responsive Adjustment ---
+- All : landscape phones, small tablets (iPad Mini in landscape) - minor spacing adjustments and ensure nav fits well
+*/
+@media (max-width: calc(var(--bp-md) - 1px)) {
+    .nav-container nav ul {
+        justify-content: center;
+    }
+}
+
+/* --- Responsive Adjustment ---
+- All : landscape phones, small tablets (iPad Mini in landscape) - minor spacing adjustments and ensure contact form layout fits well
+*/
+@media (min-width: var(--bp-md)) {
+    .contact-wrapper {
+        grid-template-columns: 5fr 7fr;
+    }
+}
+
+/* --- Responsive Adjustment ---
+- 320px : Below of the small phones (iPhone SE, older Android)
+*/
+@media (max-width: 319px) {
+    .resolution-compatible {
+        display: none;
+    }
+    .resolution-incompatible {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow-wrap: anywhere;
+        width: 100vw;
+        height: 100vh;
+        min-width: 100vw;
+        min-height: 100vh;
+        background-color: var(--dark);
+        color: var(--white);
+        z-index: 9999;
+    }
+}
+
+/* --- Responsive Adjustment ---
+- 374px : portrait phones (iPhone 6/7/8/X/11) - minor spacing adjustments to ensure content fits well
+*/
+@media (max-width: 374px) {
+    .container { 
+        width: 92%;
+    }
+    .nav-container nav ul { 
+        gap: 0.5rem; 
+    }
+    .nav-container nav ul li a { 
+        padding: 0.3rem 0.45rem; font-size: 0.95rem; 
+    }
+    .cta-group { 
+        gap: 0.5rem; 
+    }
+}
+
+/* --- Responsive Adjustment ---
+- 375px : portrait phones (iPhone 6/7/8/X/11) - minor spacing adjustments and ensure avatar fits well
+- 424px : larger phones (Plus/Pro models) - minor spacing adjustments and ensure avatar fits well
+*/
+@media (min-width: 375px) and (max-width: 424px) {
+    .container { 
+        width: 92%; 
+    }
+    .nav-container nav ul { 
+        gap: 0.75rem; 
+    }
+}
+
+/* --- Responsive Adjustment ---
+- 425px : larger phones (Plus/Pro models)
+- 479px : landscape phones, small tablets (iPad Mini in landscape)
+*/
+@media (min-width: 425px) and (max-width: 479px) {
+    .container { 
+        width: 92%; 
+    }
+}
+
+/* --- Responsive Adjustment ---
+- 520px : landscape phones, small tablets (iPad Mini in landscape) - minor spacing adjustments and ensure form layout fits well
+*/
+@media (min-width: 520px) {
+    .contact-form .btn[type="submit"] { 
+        width: auto; 
+    }
+    .contact-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+    .contact-info { 
+        text-align: left; 
+    }
+}
+
+/* --- Responsive Adjustment ---
+- 480px : landscape phones, small tablets (iPad Mini in landscape)
+- 599px : small tablets, portrait phablets - ensure 2-col project grid and adjust container
+*/
+@media (min-width: 480px) and (max-width: 599px) {
+    .grid-container { 
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    }
+}
+
+/* --- Responsive Adjustment ---
+- 600px : small tablets, portrait phablets - ensure 2-col project grid and adjust container width 
+- 767px : small tablets, portrait phablets - minor spacing adjustments
+*/
+@media (min-width: 600px) and (max-width: 767px) {
+    .grid-container { 
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+    }
+}
+
+/* --- Responsive Adjustment ---
+- 768px : tablets (iPad portrait) - ensure 2-col project grid and adjust container width 
+- 819px : iPad Pro portrait - minor spacing adjustments
+*/
+@media (min-width: 768px) and (max-width: 819px) {
+    .grid-container { 
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+    }
+}
+
+/* --- Responsive Adjustment ---
+- 820px : landscape phones, small tablets (iPad Mini in landscape) 
+- 991px : small laptops
+*/
+@media (min-width: 820px) and (max-width: 991px) {
+    .grid-container { 
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+    }
+}
+
+/* --- Responsive Adjustment ---
+- 992px : small laptops 
+*/
+@media (min-width: 992px) {
+    :root { 
+        --container-width: 1100px; 
+    }
+    .grid-container { 
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+    }
+}
+
+/* --- Responsive Adjustment ---
+- 1024px : standard desktop / iPad landscape: minor spacing
+*/
+@media (min-width: 1024px) {
+    .cta-group { 
+        gap: 1rem;
+    }
+}
+
+/* --- Responsive Adjustment ---
+- 1200px : large desktop
+*/
+@media (min-width: 1200px) {
+    :root { 
+        --container-width: 1180px; 
+    }
+    .grid-container { 
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    }
+    .modal-content { 
+        max-width: 1360px; 
+    }
+}
+
+/* --- Responsive Adjustment ---
+- 1440px : larger screens
+*/
+@media (min-width: 1440px) {
+    :root { 
+        --container-width: 1320px; 
+    }
+    .grid-container { 
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    }
+    .modal-content { 
+        max-width: 1440px; 
+    }
+}
+
+/* --- Responsive Adjustment ---
+- 1600px : wide desktops
+*/
+@media (min-width: 1600px) {
+    :root { 
+        --container-width: 1420px; 
+    }
+    .grid-container { 
+        grid-template-columns: repeat(auto-fit, minmax(319px, 1fr)); 
+    }
+}
+
+/* --- Responsive Adjustment ---
+- 1920px : full HD screens
+*/
+@media (min-width: 1920px) {
+    :root { 
+        --container-width: 1520px; 
+    }
+}
+
+/* --- Responsive Adjustment ---
+- 1920px : Above of the full HD screens
+*/
+@media (min-width: 1921px) {
+    .resolution-compatible {
+        display: none;
+    }
+    .resolution-incompatible {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow-wrap: anywhere;
+        width: 100vw;
+        height: 100vh;
+        min-width: 100vw;
+        min-height: 100vh;
+        background-color: var(--dark);
+        color: var(--white);
+        z-index: 9999;
+    }
+}
