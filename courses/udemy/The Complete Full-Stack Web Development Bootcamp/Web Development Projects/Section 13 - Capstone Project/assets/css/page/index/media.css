@@ -67,6 +67,12 @@
     .cta-group { 
         gap: 0.5rem; 
     }
+    .home {
+        padding: 7rem 0rem;
+    }
+    .resume__avatar {
+        width: 75%;
+    }
 }
 
 /* --- Responsive Adjustment ---
@@ -80,6 +86,12 @@
     .nav-container nav ul { 
         gap: 0.75rem; 
     }
+    .home {
+        padding: 7rem 0rem;
+    }
+    .resume__avatar {
+        width: 75%;
+    }
 }
 
 /* --- Responsive Adjustment ---
@@ -89,6 +101,9 @@
 @media (min-width: 425px) and (max-width: 479px) {
     .container { 
         width: 92%; 
+    }
+    .home {
+        padding: 7rem 0rem;
     }
 }
 
@@ -105,6 +120,9 @@
     .contact-info { 
         text-align: left; 
     }
+    .home {
+        padding: 7rem 0rem;
+    }
 }
 
 /* --- Responsive Adjustment ---
@@ -115,6 +133,9 @@
     .grid-container { 
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
     }
+    .home {
+        padding: 7rem 0rem;
+    }
 }
 
 /* --- Responsive Adjustment ---
@@ -124,6 +145,9 @@
 @media (min-width: 600px) and (max-width: 767px) {
     .grid-container { 
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+    }
+    .home {
+        padding: 7rem 0rem;
     }
 }
 
@@ -141,9 +165,12 @@
 - 820px : landscape phones, small tablets (iPad Mini in landscape) 
 - 991px : small laptops
 */
-@media (min-width: 820px) and (max-width: 991px) {
+@media (min-width: 820px) and (max-width: 990px) {
     .grid-container { 
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+    }
+    .home {
+        padding: 7rem 0rem;
     }
 }
 
@@ -156,6 +183,9 @@
     }
     .grid-container { 
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+    }
+    .home {
+        padding: 12rem 0rem;
     }
 }
 
@@ -216,6 +246,12 @@
 @media (min-width: 1920px) {
     :root { 
         --container-width: 1520px; 
+    }
+    .home {
+        padding: 11rem 0 11rem 0;
+    }
+    .conact {
+        padding: 1rem 0 0.6rem 0;
     }
 }
 
