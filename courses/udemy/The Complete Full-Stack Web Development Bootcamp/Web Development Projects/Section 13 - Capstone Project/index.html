@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio of Ryan Pontes, a Web Developer specializing in accessible and high-performance web experiences.">
+    <title>My Capstone Project | Ryan Pontes</title>
+    <link rel="stylesheet" href="./assets/css/page/index/model/resume/style.css">
+    <link rel="stylesheet" href="./assets/css/page/index/model/resume/media.css">
+    <link rel="stylesheet" href="./assets/css/page/index/style.css">
+    <link rel="stylesheet" href="./assets/css/page/index/media.css">
+    <link rel="stylesheet" href="./assets/css/page/index/keyframes.css">
+</head>
+<body>
+    <div class="resolution-compatible">
+        <header>
+            <div class="nav-container container">
+                <nav aria-label="Main Navigation">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section id="home" class="home">
+                <div class="container">
+                    <h1>Hi, I'm Ryan Pontes</h1>
+                    <p>A passionate Developer dedicated to building accessible, high-performance web experiences.</p>
+                    <div class="cta-group">
+                        <a href="#projects" class="btn btn--primary">View My Work</a>
+                        <a href="#resume-modal" class="btn btn--secondary">See Resume</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="projects">
+                <div class="container">
+                    <h2>Featured Projects</h2>
+                    <div class="grid-container">
+                        <article class="card" tabindex="0">
+                            <img src="./assets/images/page/index/features/project-1.png" alt="Screenshot of Project 1" loading="lazy">
+                            <div class="card-content">
+                                <h3>Project I - Responsive Design</h3>
+                                <p>A brief description of the problem solved and the technologies used (e.g., HTML, CSS, JS).</p>
+                                <a href="#" class="link">View Live Demo &rarr;</a>
+                            </div>
+                        </article>
+
+                        <article class="card" tabindex="0">
+                            <img src="./assets/images/page/index/features/project-2.png" alt="Screenshot of Project 2" loading="lazy">
+                            <div class="card-content">
+                                <h3>Project II - Interactive UI</h3>
+                                <p>Interactive UI built with accessibility best practices in mind.</p>
+                                <a href="#" class="link">View Live Demo &rarr;</a>
+                            </div>
+                        </article>
+
+                        <article class="card" tabindex="0">
+                            <img src="./assets/images/page/index/features/project-3.png" alt="Screenshot of Project 3" loading="lazy">
+                            <div class="card-content">
+                                <h3>Project III - User Experience</h3>
+                                <p>Performance-focused app with optimized asset delivery.</p>
+                                <a href="#" class="link">View Live Demo &rarr;</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="contact">
+                <div class="container">
+                    <div class="contact-wrapper">
+                        <div class="contact-info">
+                            <h2>Get In Touch</h2>
+                            <p>Have a question or want to work together? Fill out the form below. I am always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+                        </div>
+
+                        <form action="#" method="post" class="contact-form" aria-labelledby="contact-heading">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" name="name" placeholder="Enter your name" required aria-required="true">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" name="email" placeholder="email@example.com" required aria-required="true">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea name="message" rows="5" placeholder="How can I help you?" required aria-required="true"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn--primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div>
+                <p><small>&copy; 2026 Ryan Pontes. Built for Capstone Project.</small></p>
+            </div>
+        </footer>
+
+        <div id="resume-modal" class="modal-overlay">
+            <div class="modal-content">
+                <a href="#" class="modal-close" aria-label="Close Resume">&times;</a>
+                <section class="resume">
+                    <div class="resume-layout">
+                        <div class="resume-layout-left">
+                            <div class="resume-sidebar">
+                                <div class="resume__profile">
+                                    <div>
+                                        <img class="resume__avatar" src="./assets/images/page/index/resume/avatar-profile.png" alt="Profile picture of Ryan Pontes">
+                                        <h1>Ryan Pontes</h1>
+                                    </div>
+                                    <div>
+                                        <h2>< Profile/></h2>
+                                        <hr>
+                                        <p>
+                                            As a professional with experience in managing, administering, 
+                                            designing and developing web applications using various software stacks. 
+                                            Skilled in building and deploying complex systems, web services, and databases. 
+                                            Possesses a broad knowledge base across multiple fields of study.
+                                        </p>
+                                    </div>
+                                    <div class="resume-profile-details">
+                                        <div>
+                                            <div>Birthday</div>
+                                            <div>20/01/1997</div>
+                                        </div>
+                                        <div>
+                                            <div>Nationality</div>
+                                            <div>British & Portuguese</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="resume__education">
+                                    <h2>< Education/></h2>
+                                    <hr>
+                                    <div class="resume-education-university">
+                                        <strong>University Degree</strong> | <span>Informatic Science</span>
+                                        <div>
+                                            <span>Universidade da Madeira, </span><strong>2017 - 2019</strong>
+                                            <br><small>Madeira Island, Portugal</small>
+                                        </div>
+                                    </div>
+                                    <div class="resume-education-university-details">
+                                        <ul>
+                                            <li>
+                                                <strong>Internship</strong>
+                                            </li>
+                                            <li>
+                                                <ul>
+                                                    <li>Acin, Web Developer</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong>University-level Coursework:</strong>
+                                            </li>
+                                            <li>
+                                                <ul>
+                                                    <li>Information Systems Technology and Programming</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resume-offset">
+                            <div class="resume-main">
+                                <div class="resume__experience">
+                                    <h2>< Professional/></h2>
+                                    <hr>
+                                    <div class="resume-work-section">
+                                        <div>
+                                            <div>
+                                                <h3>Full Stack Web Developer</h3>
+                                                <span>| &nbsp;Jun 2025 - Nov 2025</span>
+                                                <p><a>Kenso Solutions</a> - Industrial Automation & (IoT) | Spain</p>
+                                            </div>
+                                            <div>
+                                                <h3>Full Stack Web Developer</h3>
+                                                <span>Jun 2025 - Nov 2025</span>
+                                                <p>
+                                                    <a>Kenso Solutions</a><br>Industrial Automation & (IoT) 
+                                                    <br>Spain
+                                                </p>
+                                            </div>
+                                            <p>
+                                                I worked as a Full Stack Web Developer at Kenso Solutions as part of the
+                                                Eurodyssey program. My work centers on building and improving software
+                                                management systems within web environments. Beyond the technical scope,
+                                                this program has been a transformative cultural experience, helping me gain
+                                                the language skills and cultural fluency needed to thrive in Spain’s
+                                                professional landscape.
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <h3>Full Stack Developer</h3>
+                                                <span>| &nbsp;Nov 2023 - Jan 2025</span>
+                                                <p>
+                                                    <a>NOS Madeira</a> - Telecommunication | Portugal
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <h3>Full Stack Developer</h3>
+                                                <span>Nov 2023 - Jan 2025</span>
+                                                <p>
+                                                    <a>NOS Madeira</a><br>Telecommunication
+                                                    <br>Portugal
+                                                </p>
+                                            </div>
+                                            <p>
+                                                As a Full Stack Developer Trainee within the Randstad and NOS Madeira
+                                                collaborative program, I successfully bridged the gap between academic
+                                                theory and industry practice. I contributed to a diverse portfolio of projects,
+                                                delivering full-stack solutions to solve complex development challenges and
+                                                translating core curriculum concepts into functional, production-ready code.
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <h3>Web Developer</h3>
+                                                <span>| &nbsp;Feb 2019 - Jun 2019</span>
+                                                <p><a>Acin</a> -  IT Services & IT Consulting | Portugal</p>
+                                            </div>
+                                            <div>
+                                                <h3>Web Developer</h3>
+                                                <span>Feb 2019 - Jun 2019</span>
+                                                <p>
+                                                    <a href="#">Acin</a><br>IT Services & IT Consulting
+                                                    <br>Portugal
+                                                </p>
+                                            </div>
+                                            <p>
+                                                This internship in Information Systems Technology and Programming focuses
+                                                on applying academic theory to professional environments. I was responsible
+                                                for integrating the technical knowledge gained from my coursework into
+                                                real-world projects, bridging the gap between classroom learning and
+                                                industry-standard software development.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="resume__skills">
+                                    <h2>< code Stack/></h2>
+                                    <hr>
+                                    <div class="skills-stack">
+                                        <div>
+                                            <h4>Languages</h4>
+                                            <ul>
+                                                <li>PHP</li>
+                                                <li>JavaScript</li>
+                                                <li>TypeScript</li>
+                                                <li>HTML</li>
+                                                <li>CSS</li>
+                                                <li>SQL</li>
+                                                <li>NoSQL</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h4>Frameworks</h4>
+                                            <ul>
+                                                <li>Angular</li>
+                                                <li>Vue</li>
+                                                <li>Express.js</li>
+                                                <li>Laravel</li>
+                                                <li>CodeIgniter</li>
+                                                <li>Svelte</li>
+                                                <li>Symfony</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h4>Databases</h4>
+                                            <ul>
+                                                <li>MySQL</li>
+                                                <li>MySQL Workbench</li>
+                                                <li>MongoDB</li>
+                                                <li>MongoDB Compass</li>
+                                                <li>MariaDB</li>
+                                                <li>HeidiSQL</li>
+                                                <li>DBeaver</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+    <div class="resolution-incompatible">
+        <h1>This page is not compatible with your screen resolution.</h1>
+    </div>
+</body>
+</html>
