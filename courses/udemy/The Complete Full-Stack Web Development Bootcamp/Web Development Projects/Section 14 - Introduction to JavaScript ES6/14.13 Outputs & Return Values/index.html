@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.13 Outputs & Return Values</title>
+</head>
+<body>
+</body>
+<script>
+    function getMilk(money, costPerBottle) {
+        console.log("leaveMouse");
+        console.log("moveRight");
+        console.log("moveRight");
+        console.log("moveUp");
+        console.log("moveUp");
+        console.log("moveUp");
+        console.log("moveUp");
+        console.log("moveRight");
+        console.log("moveRight");
+
+        console.log("Buy " + calcBottles(money, 2.5) + " bottles of milk.");
+
+        console.log("moveLeft");
+        console.log("moveLeft");
+        console.log("moveDown");
+        console.log("moveDown");
+        console.log("moveDown");
+        console.log("moveDown");
+        console.log("moveLeft");
+        console.log("moveLeft");
+        console.log("enterHouse");
+
+        return calcChange(money, costPerBottle)
+    };
+
+    function calcBottles(startingMoney, costPerBottle) {
+        return Math.floor(startingMoney / costPerBottle);
+    }
+
+    function calcChange(startingAmount, costPerBottle) {
+        return startingAmount % costPerBottle;
+    }
+
+    console.log("Hello master, here is your " + getMilk(10, 3) + " change.");
+</script>
+</html>
