@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15.3 Leap Year Challenge Exercise</title>
+</head>
+<body>
+</body>
+<script>
+    const leapYear = {
+        '2400': isLeap(2400),
+        '1989': isLeap(1989)
+    }
+
+    function isLeap(year) {
+        const divisible = [4, 100, 400];
+        
+        const result = divisible.map(item => year % item).some(item => item === 0);
+        
+        return result ? 'Leap year.' : 'Not leap year.';
+    }
+
+    console.log(leapYear['2400']);
+    console.log(leapYear['1989']);
+</script>
+</html>
