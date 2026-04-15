@@ -7,3 +7,9 @@ console.log(textContent);
 // Output: Hello
 
 document.querySelector('h1').innerHTML = '<em>Good Bye</em>';
+
+document.querySelector('button').addEventListener('click', checkboxEvent);
+
+function checkboxEvent() {
+    document.querySelector('input').click();
+}
