@@ -17,10 +17,10 @@ image2.setAttribute(qualifiedName, qualifiedvalue2);
 const state = document.querySelector('h1');
 
 if (randomNumber1 >= randomNumber2) {
-    state.innerHTML = "Players 1 Wins!";
+    state.innerHTML = "🚩 Play 1 Wins!";
 } 
 if (randomNumber1 <= randomNumber2) {
-    state.innerHTML = "Players 2 Wins!";
+    state.innerHTML = "Player 2 Wins! 🚩";
 } 
 if (randomNumber1 == randomNumber2) {
     state.innerHTML = "Draw!";
