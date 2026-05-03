@@ -29,4 +29,3 @@ console.log(calculator(5, 4, divide));
 // Output: 1.25
 
 // Install Node.js to run this code in the terminal.
-// To run this code, save it in a file named "index.js" and execute the command "node index.js" in the terminal.
