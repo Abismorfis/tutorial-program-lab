@@ -35,10 +35,20 @@ function playSound(key) {
     }
 }
 
+function buttonAnimation (pressedButton) {
+    pressedButton.classList.add('pressed');
+
+    setTimeout(() => {
+        pressedButton.classList.remove('pressed');
+        
+    }, 100);
+}
+
 drumButtons.forEach(button => {
     button.addEventListener('click', () => {
         const buttonInnerHTML = button.innerHTML;
 
-        playSound(buttonInnerHTML); 
+        playSound(buttonInnerHTML);
+        buttonAnimation(button);
     });
 });
