@@ -1,17 +1,14 @@
 const gamePattern = [];
 const userClickedPattern = [];
+const buttonColours = ["red", "blue", "green", "yellow"];
 
-function nextSequence(id) {
-    const userChosenColour = id;
+function nextSequence() {
     const randomNumber = Math.floor(Math.random() * 4);
-    const buttonColours = ["red", "blue", "green", "yellow"];
-    const buttonChosen = buttonColours[randomNumber];
+    const randomChosenColour = buttonColours[randomNumber];
     
-    gamePattern.push(buttonChosen);
-    userClickedPattern.push(userChosenColour);
+    gamePattern.push(randomChosenColour);
 
-    console.log(gamePattern);
-    console.log(userClickedPattern);
+    playSound(randomChosenColour);
 }
 
 function playSound(name) {
@@ -20,11 +17,15 @@ function playSound(name) {
     audio.play();
 }
 
-$(".btn").click(function(event) {
+$(".btn").click(function() {
+    const userChosenColour = $(this).attr("id");
+
+    userClickedPattern.push(userChosenColour);
+
     $(this)
         .animate({ opacity: 0.2 }, 100)
         .animate({ opacity: 1 }, 100, () => {
-            playSound(this.id);
-            nextSequence(this.id);
+            playSound(userChosenColour);
+            //nextSequence();
     });
 });
