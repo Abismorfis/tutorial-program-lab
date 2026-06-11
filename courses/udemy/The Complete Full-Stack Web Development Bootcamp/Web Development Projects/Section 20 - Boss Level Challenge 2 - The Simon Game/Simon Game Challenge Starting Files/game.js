@@ -18,6 +18,14 @@ function playSound(name) {
     audio.play();
 }
 
+function animatePress(currentColour) {
+    $(`#${currentColour}`).addClass("pressed");
+
+    setTimeout(() => {
+        $(`#${currentColour}`).removeClass("pressed");
+    }, 100);
+}
+
 $(".btn").click(function() {
     const userChosenColour = $(this).attr("id");
 
@@ -27,6 +35,7 @@ $(".btn").click(function() {
         .animate({ opacity: 0.2 }, 100)
         .animate({ opacity: 1 }, 100, () => {
             playSound(userChosenColour);
+            animatePress(userChosenColour);
             //nextSequence();
     });
 });
