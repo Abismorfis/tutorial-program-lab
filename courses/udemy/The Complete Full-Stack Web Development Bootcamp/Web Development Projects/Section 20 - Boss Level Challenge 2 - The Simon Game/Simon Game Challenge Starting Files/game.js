@@ -1,11 +1,11 @@
-const buttonColours = ["red", "blue", "green", "yellow"];
+const buttonColour = ["red", "blue", "green", "yellow"];
 
 const gamePattern = [];
 const userClickedPattern = [];
 
 function nextSequence() {
     const randomNumber = Math.floor(Math.random() * 4);
-    const randomChosenColour = buttonColours[randomNumber];
+    const randomChosenColour = buttonColour[randomNumber];
     
     gamePattern.push(randomChosenColour);
 
