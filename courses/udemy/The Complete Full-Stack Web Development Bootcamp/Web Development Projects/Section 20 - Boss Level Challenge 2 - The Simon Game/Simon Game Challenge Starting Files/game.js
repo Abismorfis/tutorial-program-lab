@@ -5,16 +5,24 @@ const userClickedPattern = [];
 
 let isKeyPressed = false;
 let level = 0;
+let checkLevel = 0;
 
 function checkAnswer(currentLevel) {
-    if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
+
+    if (gamePattern[checkLevel] === userClickedPattern[checkLevel]) {
         console.log("success");
 
-        if (userClickedPattern.length === gamePattern.length) {
-            setTimeout(() => {
+        setTimeout(() => {
+            checkLevel++;
+
+            if (checkLevel === gamePattern.length) {
                 nextSequence();
-            }, 1000);
-        }
+
+                checkLevel = 0;
+                userClickedPattern.length = 0;
+            }
+        }, 1000);
+        
     } else {
         console.log("wrong");
 
@@ -30,14 +38,17 @@ function checkAnswer(currentLevel) {
 
         gamePattern.length = 0;
         userClickedPattern.length = 0;
+        checkLevel = 0;
+        level = 0;
 
         //startOver();
     }
+    
 }
 
 function nextSequence() {
     const randomNumber = Math.floor(Math.random() * 4);
-    const randomChosenColour = buttonColour [randomNumber];
+    const randomChosenColour = buttonColour[randomNumber];
     const levelTitle = $('#level-title');
     
     gamePattern.push(randomChosenColour);
