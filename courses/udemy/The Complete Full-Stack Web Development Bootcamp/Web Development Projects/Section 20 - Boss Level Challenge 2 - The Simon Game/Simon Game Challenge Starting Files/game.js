@@ -4,22 +4,26 @@ const gamePattern = [];
 const userClickedPattern = [];
 
 let isKeyPressed = false;
-let level = 0;
-let checkLevel = 0;
+let isWrongAnswer = false;
+let currentLevel = 0;
+let currentPatternIndex = 0;
 
-function checkAnswer(currentLevel) {
+function checkAnswer() {
 
-    if (gamePattern[checkLevel] === userClickedPattern[checkLevel]) {
+    if (gamePattern[currentPatternIndex] === userClickedPattern[currentPatternIndex]) {
         console.log("success");
 
         setTimeout(() => {
-            checkLevel++;
+            currentPatternIndex++;
 
-            if (checkLevel === gamePattern.length) {
+            if (currentPatternIndex === gamePattern.length) {
                 nextSequence();
 
-                checkLevel = 0;
                 userClickedPattern.length = 0;
+
+                currentPatternIndex = 0;
+                
+                isWrongAnswer = false;
             }
         }, 1000);
         
@@ -38,8 +42,11 @@ function checkAnswer(currentLevel) {
 
         gamePattern.length = 0;
         userClickedPattern.length = 0;
-        checkLevel = 0;
-        level = 0;
+
+        currentPatternIndex = 0;
+        currentLevel = 0;
+
+        isWrongAnswer = true;
 
         //startOver();
     }
@@ -55,9 +62,9 @@ function nextSequence() {
 
     animatePress(randomChosenColour);
 
-    levelTitle.text(`Level ${level}`);
+    levelTitle.text(`Level ${currentLevel}`);
 
-    level++;
+    currentLevel++;
 }
 
 function playSound(name) {
@@ -95,7 +102,11 @@ $(".btn").click(function() {
 $(document).keydown(function(event) {
     if (gamePattern.length === 0 && event.key === "a") {
         nextSequence();
-
-        isKeyPressed = true;
+    } else if (isWrongAnswer === true) {
+        nextSequence();
+    } else {
+        return;
     }
+
+    isKeyPressed = true;
 });
