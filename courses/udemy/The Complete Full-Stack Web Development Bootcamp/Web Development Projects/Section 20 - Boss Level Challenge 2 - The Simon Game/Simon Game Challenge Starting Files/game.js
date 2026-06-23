@@ -4,9 +4,19 @@ const gamePattern = [];
 const userClickedPattern = [];
 
 let isKeyPressed = false;
-let isWrongAnswer = false;
+let isCorrectAnswer = false;
 let currentLevel = 0;
 let currentPatternIndex = 0;
+
+function startOver() {
+    gamePattern.length = 0;
+    userClickedPattern.length = 0;
+
+    currentPatternIndex = 0;
+    currentLevel = 0;
+
+    isCorrectAnswer = true;
+}
 
 function checkAnswer() {
 
@@ -23,7 +33,7 @@ function checkAnswer() {
 
                 currentPatternIndex = 0;
                 
-                isWrongAnswer = false;
+                isCorrectAnswer = false;
             }
         }, 1000);
         
@@ -40,15 +50,7 @@ function checkAnswer() {
 
         $("#level-title").text("Game Over, Press Any Key to Restart");
 
-        gamePattern.length = 0;
-        userClickedPattern.length = 0;
-
-        currentPatternIndex = 0;
-        currentLevel = 0;
-
-        isWrongAnswer = true;
-
-        //startOver();
+        startOver();
     }
     
 }
@@ -102,7 +104,7 @@ $(".btn").click(function() {
 $(document).keydown(function(event) {
     if (gamePattern.length === 0 && event.key === "a") {
         nextSequence();
-    } else if (isWrongAnswer === true) {
+    } else if (isCorrectAnswer === true) {
         nextSequence();
     } else {
         return;
