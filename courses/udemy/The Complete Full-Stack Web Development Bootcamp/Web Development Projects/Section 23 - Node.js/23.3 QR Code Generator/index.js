@@ -7,9 +7,16 @@ import inquirer from 'inquirer';
 inquirer
   .prompt([
     /* Pass your questions in here */
+    {
+      type: 'input',
+      name: 'url',
+      message: 'Type in your URL:'
+    }
   ])
   .then((answers) => {
     // Use user feedback for... whatever!!
+    const url = answers.url;
+    console.log(`You entered: ${url}`);
   })
   .catch((error) => {
     if (error.isTtyError) {
