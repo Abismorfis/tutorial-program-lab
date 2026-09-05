@@ -7,6 +7,13 @@ app.get("/", (req, res) => {
     res.send("<h1>Hello World</h1>");
 });
 
+app.get("/about", (req, res) => {
+    res.send(`
+        <h1>About Me</h1>
+        <p>My name is Ryan</p>
+    `);
+});
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
