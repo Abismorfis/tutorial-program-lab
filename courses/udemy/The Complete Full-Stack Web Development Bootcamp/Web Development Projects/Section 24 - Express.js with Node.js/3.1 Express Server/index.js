@@ -21,6 +21,17 @@ app.get("/contact", (req, res) => {
     `);
 });
 
+app.get("/projects", (req, res) => {
+    res.send(`
+        <h1>My Projects</h1>
+        <ul>
+            <li>Project 1</li>
+            <li>Project 2</li>
+            <li>Project 3</li>
+        </ul>
+    `);
+}
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
