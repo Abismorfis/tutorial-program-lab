@@ -30,7 +30,7 @@ app.get("/projects", (req, res) => {
             <li>Project 3</li>
         </ul>
     `);
-}
+});
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
