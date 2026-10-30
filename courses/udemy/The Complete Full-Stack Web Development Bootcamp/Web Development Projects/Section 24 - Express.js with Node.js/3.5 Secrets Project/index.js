@@ -15,6 +15,15 @@ app.use(bodyParser.urlencoded({
     extended: true 
 }));
 
+function passwordCheck(req, res, next) {
+  const password = req.body["password"];
+  if (password === "ILoveProgramming") {
+    userIsAuthorised = true;
+  }
+  next();
+}
+app.use(passwordCheck);
+
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
 });
