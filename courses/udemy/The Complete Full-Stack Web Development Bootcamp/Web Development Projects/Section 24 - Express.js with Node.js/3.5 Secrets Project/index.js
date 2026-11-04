@@ -30,6 +30,8 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
 });
 
+app.post("/check", (req, res) => {});
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 });
